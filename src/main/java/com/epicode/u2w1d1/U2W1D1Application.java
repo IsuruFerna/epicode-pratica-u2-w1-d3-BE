@@ -1,5 +1,7 @@
 package com.epicode.u2w1d1;
 
+import com.epicode.u2w1d1.entities.Drink;
+import com.epicode.u2w1d1.entities.Pizza;
 import com.epicode.u2w1d1.entities.PizzaDetail;
 import com.epicode.u2w1d1.entities.PizzaHawaiian;
 import com.epicode.u2w1d1.entities.toppings.Topping;
@@ -33,6 +35,20 @@ public class U2W1D1Application {
 		);
 
 		System.out.println(toppings);
+
+		// pizza
+		Pizza pizzaMargherita = (Pizza) ctx.getBean("pizzaMargerita");
+		System.out.println(pizzaMargherita);
+
+		// drinks
+		Drink lemonade = (Drink) ctx.getBean("lemonade");
+		System.out.println(lemonade);
+
+		Drink water = (Drink) ctx.getBean("water");
+		System.out.println(water);
+
+		Drink wine = (Drink) ctx.getBean("wine");
+		System.out.println(wine);
 
 	}
 
