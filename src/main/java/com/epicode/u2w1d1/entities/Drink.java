@@ -9,7 +9,7 @@ import lombok.ToString;
 @NoArgsConstructor
 @Setter
 @ToString
-public class Drink {
+public class Drink implements Order {
     private String name;
     private int calories;
     private double price;
@@ -30,5 +30,10 @@ public class Drink {
         this.price = price;
         this.volume = volume;
         this.amtAlcohol = null;
+    }
+
+    @Override
+    public void details() {
+        System.out.println(this);
     }
 }

@@ -10,7 +10,7 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Pizza {
+public class Pizza implements Order {
     private String name;
     private List<Topping> ingredients;
     private int calories;
@@ -41,5 +41,12 @@ public class Pizza {
             this.price = 4.99;
             this.calories = 1104;
         }
+
+
+    }
+
+    @Override
+    public void details() {
+        System.out.println(this);
     }
 }
