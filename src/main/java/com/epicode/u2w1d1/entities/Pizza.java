@@ -22,6 +22,7 @@ public class Pizza {
         boolean hasTomato = false;
         boolean hasCheese = false;
 
+        // WHAT ARE DECORATORS? AND HOW TO USE THEM?
         // pizza margherita checker
         if (ingredients.size() == 2) {
             for (Topping topping : ingredients) {
