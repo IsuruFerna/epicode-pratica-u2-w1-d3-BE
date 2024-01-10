@@ -9,7 +9,7 @@ import lombok.ToString;
 @NoArgsConstructor
 @Setter
 @ToString
-public class Drink implements Order {
+public class Drink implements ItemOrder {
     private String name;
     private int calories;
     private double price;

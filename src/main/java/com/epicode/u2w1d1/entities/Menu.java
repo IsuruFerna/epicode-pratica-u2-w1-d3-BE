@@ -19,17 +19,20 @@ public class Menu {
     @Override
     public String toString() {
         System.out.println("---------- PIZZA ------------");
+        System.out.println("Pizzas | Calories | Price");
         pizzaList.stream().forEach(pizza -> {
             String ingredients = pizza.getIngredients().stream().map(Topping::getName).collect(Collectors.joining(", "));
-            System.out.println(pizza.getName() + " (" + ingredients + ") " + "calories: " + pizza.getCalories() + " price: " + pizza.getPrice());
+            System.out.println(pizza.getName() + "(" + ingredients + ") | " + "calories: " + pizza.getCalories() + " | price: " + pizza.getPrice());
         });
 
         System.out.println("---------- TOPPING ------------");
+        System.out.println("Toppings | Calories | Price");
         toppingList.forEach(topping -> {
-            System.out.println(topping.getName() + " " + topping.getCalories() + " " + topping.getPrice());
+            System.out.println(topping.getName() + " | " + topping.getCalories() + " | " + topping.getPrice());
         });
         System.out.println("---------- DRINK ------------");
-        drinkList.forEach(drink -> System.out.println(drink.getName() + "(" + drink.getVolume() + ")" + " " + drink.getCalories() + " " + drink.getPrice()));
+        System.out.println("Drinks | Calories | Price");
+        drinkList.forEach(drink -> System.out.println(drink.getName() + "(" + drink.getVolume() + ", " + drink.getAmtAlcohol() + ")" + " | " + drink.getCalories() + " | " + drink.getPrice()));
 
         return "";
     }

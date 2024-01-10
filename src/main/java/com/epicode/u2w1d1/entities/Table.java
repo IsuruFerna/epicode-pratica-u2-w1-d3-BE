@@ -14,5 +14,4 @@ public class Table {
     private int seats;
     private Availablility availablility;
     private List<Order> orders;
-
 }

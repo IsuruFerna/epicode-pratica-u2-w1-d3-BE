@@ -11,7 +11,7 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Pizza implements Order {
+public class Pizza implements ItemOrder {
     private String name;
     private List<Topping> ingredients;
     private int calories;
